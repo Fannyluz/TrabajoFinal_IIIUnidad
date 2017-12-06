@@ -10,6 +10,13 @@
 \usepackage{txfonts}
 \usepackage{stackrel} 
 \usepackage{multirow}
+\usepackage[hidelinks]{hyperref}
+% Fancy Header and Footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\cfoot{}
+\rfoot{\thepage}
+%
 \usepackage{enumerate} % enumerados
 \renewcommand{\labelitemi}{$-$}
 \renewcommand{\labelitemii}{$\cdot$}
@@ -89,8 +96,10 @@ Tapia Ticona, Lupe Carolina			(2014049548) \\
 
 
 
- \tableofcontents
- \newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
 
  
 \section{INTRODUCCIÓN} 
@@ -238,7 +247,7 @@ RedoLog: El Redo Log es un conjunto de archivos que protegen la información de 
 Primero se instaló la base de datos Oracle:
 Oracle Database 11g Release 2 (11.2.0.1.0)
 Standard Edition, Standard Edition One, and Enterprise Edition para Windows\\
-http://www.oracle.com/technetwork/database/enterprise-edition/downloads/112010-win64soft-094461.html\\
+\url{http://www.oracle.com/technetwork/database/enterprise-edition/downloads/112010-win64soft-094461.html\\
 
 Segundo se utilizó el programa sql developer para windows, esto fue para migrar la base de datos de mysql a oracle.
 Si es que se requiera cambiar el puerto  oracle exec DBMS xdb.sethttpport(8082)
